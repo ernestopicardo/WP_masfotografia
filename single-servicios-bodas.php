@@ -9,7 +9,7 @@
 <?php 
     $args = array(
         'post_type' => 'bodas');
-    $bodas = new WP_Query( $args );
+        $bodas = new WP_Query( $args );
 ?>
 
 
@@ -37,18 +37,21 @@
     <div class="row pt-3">
         <?php if (  $bodas->have_posts() ) : while ( $bodas->have_posts() ) : $bodas->the_post(); ?>
         <div class="texto_descripcion col-12 col-md-4 ">
-            <div class="titulo_evento col-12">
-                <?php the_title( ) ?>
-            </div>
-            <div class="imagen_evento col-12">
-                <div class="polaroid">
-                    <img src=" <?php  the_post_thumbnail_url( )?>" alt="<?php the_title();?>" class="img-fluid">
+            <a href="<?php the_permalink();?>">
+                <div class="titulo_evento col-12">
+                    <?php the_title( ) ?>
                 </div>
-            </div>
+                <div class="imagen_evento col-12">
+                    <div class="polaroid">
+                        <img src=" <?php  the_post_thumbnail_url( )?>" alt="<?php the_title();?>" class="img-fluid">
+                    </div>
+                </div>
+            </a>
+
         </div>
 
         <?php endwhile; else : ?>
-	        <p><?php esc_html_e( 'No existen '. the_title( ) .' a mostrar' ); ?></p>
+	        <p><?php echo ( 'No existen '.  esc_html_e( the_title( ) ) .' a mostrar' ); ?></p>
         <?php endif; ?>
     </div>
 </div>

@@ -28,11 +28,6 @@ register_nav_menus( array(
 ) );
 
 
-<<<<<<< HEAD
-// ENTRADA CUSTOM DE INICIO
-
-add_action( 'init', 'Servicios' );
-=======
 // AGREGA UN MENU CONTENDTOR PARA LOS CUSTOM TYPES POST
 
 function menu_frontpage(){
@@ -53,7 +48,6 @@ add_action( 'admin_menu', 'menu_frontpage' );
 
 add_action( 'init', 'Servicios');
 
->>>>>>> 1edc8a6403dc6659125b8d71dc7d3375a334f428
 function Servicios() {
      $args = array(
      'public' => true,
@@ -66,11 +60,6 @@ function Servicios() {
          'excerpt',
           'comments' ),
      'capability_type' => 'page',
-<<<<<<< HEAD
-     'show_in_menu' => true,
-);
-register_post_type( 'Servicios', $args );
-=======
       'show_in_menu' => 'tipo-evento',
       'rewrite' => array('slug' => 'servicios')
 );
@@ -96,7 +85,6 @@ function Bodas() {
 );
 register_post_type( 'bodas', $args );
 
->>>>>>> 1edc8a6403dc6659125b8d71dc7d3375a334f428
 }
 
 
