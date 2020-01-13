@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Amarillo';
+    src: url('../fonts/amarillo.ttf');
+}
+@font-face {
+    font-family: 'Gothic';
+    src: url('../fonts/gothic.ttf');
+}
+
+/**** HOME ****/
+body, html {
+    margin: 0px;
+    background-color: rgb(39, 39, 39);
+}
+
+/* HEADER */
+.contenedor_header {
+    background-color: rgb(39, 39, 39);
+    margin: 0px auto;
+}
+.menu_class {
+    margin: 0px auto;
+}
+#bottom_mobile {
+    display: none;
+}
+
+/* END HEADER */
+/*---------------*/
+/* MENU */
+
+.current_page_item{
+    color: rgb(39, 39, 39) !important;
+}
+.active{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(39, 39, 39);
+    padding-bottom: 2px;
+}
+
+
+.menu_class li a {
+    color: antiquewhite;
+    border-bottom: solid 1px antiquewhite;
+    margin: 0px 5px;
+    text-transform: lowercase !important;
+}
+.menu_class li a::first-letter {
+    text-transform: uppercase;
+}
+.menu_class li a:hover {
+    color: rgb(255, 255, 255);
+    margin: 0px 5px;
+    transition: ease-in-out;
+    -webkit-animation: KEYFRAME-NAME 0.5s ease-in-out;
+    -moz-animation:    KEYFRAME-NAME 0.5s ease-in-out;
+    -o-animation:      KEYFRAME-NAME 0.5s ease-in-out;
+    animation:         KEYFRAME-NAME 0.5s ease-in-out;
+
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .menu_class li a {
+        font-size: 12px;
+    }
+}
+
+button {
+    color: antiquewhite;
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: 1px solid antiquewhite !important;
+    padding: 8px !important;
+}
+
+.navbar-toggler span {
+    font-size: 16px;
+    vertical-align: middle;
+}
+.navbar-toggler i {
+    vertical-align: middle;
+}
+
+/*  END MENU */
+
+
+.cont-img{
+    overflow: hidden;
+}
+
+.img_inicio {
+    width: 100% !important;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.titulo_inicio {
+    position: absolute;
+    z-index: 99;
+    color: #FFFFFF;
+    font-family: 'Gothic' ;
+    font-size: 4em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    top: 15%;
+    left: 10%;
+    text-transform: capitalize;
+}
+
+@media (max-width: 767px){
+
+    .titulo_inicio{
+        font-size: 1.5em;
+        top: -1%;
+        left: 4%;
+    }
+
+    #bottom_mobile{
+        display: block;
+    }
+
+}
+
+.carousel-control-next, .carousel-control-prev {
+    top: -10% !important;
+}
+
+
+
+  
+  @-webkit-keyframes KEYFRAME-NAME {
+    0%   { opacity: 1; }
+    50%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-moz-keyframes KEYFRAME-NAME {
+    0%   { opacity: 1; }
+    50%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-o-keyframes KEYFRAME-NAME {
+    0%   { opacity: 1; }
+    50%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes KEYFRAME-NAME {
+    0%   { opacity: 1; }
+    50%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
