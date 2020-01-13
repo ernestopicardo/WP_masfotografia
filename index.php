@@ -19,14 +19,14 @@ $the_query = new WP_Query( $args );
                 $posicion = $the_query->current_post +1; 
             ?>
                     <div class="carousel-item <?php if($posicion == 1) { echo 'active'; }else { echo '' ;} ?> ">
-                        <div class="cont-img">
-                         <?php the_post_thumbnail('post-thumbnail', ['class' => 'img_inicio img-fluid']); ?>
+                        <div class="cont_imagen">
+                            <?php the_post_thumbnail('post-thumbnail', ['class' => 'img_inicio d-block w-100']); ?>
                         </div>
+                        
                         <div class="titulo_inicio">
-                            <?php the_title(  ) ; ?>
+                        <a href="<?php the_permalink( ) ?>"> <?php the_title(  ) ; ?> </a>
                         </div>                         
                     </div>
-
                 
             <?php  endwhile; ?>
         </div>
@@ -36,7 +36,8 @@ $the_query = new WP_Query( $args );
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
-            <?php 
+
+            <?php
                 else: 
                 _e( 'No exìste vista de momento.', 'textdomain' ); 
                 endif; 

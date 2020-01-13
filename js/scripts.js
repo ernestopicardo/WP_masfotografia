@@ -1,10 +1,13 @@
-function SetHeight(){
+
+function setHeight() {
+    var h = $(window).height();
     var w = $(window).width();
-    if( w > 767 ){
-            var h = $(window).height();
-            $(".cont-img").height(h-100);
-    } 
+
+    if( w > 767){
+        $('.cont_imagen').height(h-100)
+    }
 }
 
-$(document).ready(SetHeight);
-$(window).resize(SetHeight);
+
+$(document).ready(setHeight)
+$(window).resize(setHeight)
