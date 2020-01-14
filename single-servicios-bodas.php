@@ -43,7 +43,7 @@
                 </div>
                 <div class="imagen_evento col-12">
                     <div class="polaroid">
-                        <img src=" <?php  the_post_thumbnail_url( )?>" alt="<?php the_title();?>" class="img-fluid">
+                         <?php the_post_thumbnail('medium', ['class' => 'img-fluid', 'alt' => 'Más Fotografía Uruguay' ]); ?>
                     </div>
                 </div>
             </a>

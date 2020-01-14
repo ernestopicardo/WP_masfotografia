@@ -20,7 +20,7 @@ $the_query = new WP_Query( $args );
             ?>
                     <div class="carousel-item <?php if($posicion == 1) { echo 'active'; }else { echo '' ;} ?> ">
                         <div class="cont_imagen">
-                            <?php the_post_thumbnail('post-thumbnail', ['class' => 'img_inicio d-block w-100']); ?>
+                            <?php the_post_thumbnail('Inicio', ['class' => 'img_inicio d-block w-100', 'alt' => 'Más Fotografía Uruguay' ]); ?>
                         </div>
                         
                         <div class="titulo_inicio">

@@ -2,6 +2,29 @@
 // IMAGEN DESTACADA
 add_theme_support( 'post-thumbnails' );
 
+// TAMAÑO DE IMAGEN PERSONALIZADO
+
+add_image_size( 'Inicio', 1920 , 1080 );
+
+
+// MUESTRA EL TAMÑO DE IMAGEN PERSONALIZADO
+
+add_filter('image_size_names_choose', 'tamano_personalizado' );
+
+function tamano_personalizado( $sizes ){
+    return array_merge($sizes, array(
+        //acá van los cnombres 
+        'Inicio' => __('Inicio'),
+    ));
+};
+
+function custom_jpeg_quality( $quality, $context ) {
+	return 100;
+};
+add_filter( 'jpeg_quality', 'custom_jpeg_quality', 10, 2 );
+
+
+
 // SCRIPTS Y CSS
 function masfotografia_scripts() {
     wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css' );

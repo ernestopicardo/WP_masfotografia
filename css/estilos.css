@@ -96,6 +96,7 @@ button {
     height: auto;
     position: relative;
     z-index: 0;
+    bottom: 40%;
 }
 
 .titulo_inicio {
