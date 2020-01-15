@@ -20,11 +20,12 @@ $the_query = new WP_Query( $args );
             ?>
                     <div class="carousel-item <?php if($posicion == 1) { echo 'active'; }else { echo '' ;} ?> ">
                         <div class="cont_imagen">
-                            <?php the_post_thumbnail('Inicio', ['class' => 'img_inicio d-block w-100', 'alt' => 'Más Fotografía Uruguay' ]); ?>
+                            <a href="<?php the_permalink( ) ?>">  
+                                <?php the_post_thumbnail('Inicio', ['class' => 'img_inicio d-block w-100', 'alt' => 'Más Fotografía Uruguay' ]); ?>
+                            </a>
                         </div>
-                        
                         <div class="titulo_inicio">
-                        <a href="<?php the_permalink( ) ?>"> <?php the_title(  ) ; ?> </a>
+                            <a href="<?php the_permalink( ) ?>"> <?php the_title(  ) ; ?> </a>
                         </div>                         
                     </div>
                 

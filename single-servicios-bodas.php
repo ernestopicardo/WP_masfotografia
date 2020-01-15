@@ -36,18 +36,20 @@
     <!-- SECCION MINITURA DE EVENTOS -->
     <div class="row pt-3">
         <?php if (  $bodas->have_posts() ) : while ( $bodas->have_posts() ) : $bodas->the_post(); ?>
-        <div class="texto_descripcion col-12 col-md-4 ">
-            <a href="<?php the_permalink();?>">
-                <div class="titulo_evento col-12">
-                    <?php the_title( ) ?>
-                </div>
+        <div class="contenedor_eventos col-12 col-md-4 ">
+
                 <div class="imagen_evento col-12">
                     <div class="polaroid">
-                         <?php the_post_thumbnail('medium', ['class' => 'img-fluid', 'alt' => 'Más Fotografía Uruguay' ]); ?>
+                         <a href="<?php the_permalink();?>">
+                             <?php the_post_thumbnail('medium', ['class' => 'img-fluid', 'alt' => 'Más Fotografía Uruguay' ]); ?>
+                         </a>
                     </div>
                 </div>
-            </a>
-
+                <div class="titulo_evento col-12">
+                        <a href="<?php the_permalink();?>">
+                            <?php the_title( ) ?>
+                        </a>
+                </div>
         </div>
 
         <?php endwhile; else : ?>

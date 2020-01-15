@@ -23,11 +23,11 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4">
-            <div class=" col-12 text-center titulo">
+        <div class="col-12 col-md-4">
+            <div class="col-12 text-center titulo mt-5">
                 <?php the_title(  ); ?>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-md-8 text-center offset-md-2 mt-5">
             <?php the_excerpt(); ?>
             </div>
         </div>
