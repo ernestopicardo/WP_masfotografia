@@ -9,5 +9,8 @@ function setHeight() {
 }
 
 
+//EFECTOS VISUALES
+
+
 $(document).ready(setHeight)
 $(window).resize(setHeight)

@@ -161,9 +161,14 @@ button {
     padding: 10px 10px 50px 10px;
     background-color: #FFFFFF;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow  500ms ease-in-out;
+    animation: sombras 500ms ease-in-out;
     /* transform: rotate(-2deg); */
-}
 
+}
+.polaroid:hover{
+
+}
 
 .texto_descripcion{
     
@@ -173,7 +178,7 @@ button {
     text-align: center;
     font-family: Amarillo ;
     font-size: 40px;
-     text-transform: lowercase !important; 
+    text-transform: lowercase !important; 
     color: #FFFFFF;
 }
 .titulo::first-letter{
@@ -192,6 +197,7 @@ button {
     bottom: 41px;
     color:rgba(6, 5, 49, 0.9);
     font-family: Manuscrita;
+    font-weight: bolder;
     z-index: 99;
     text-align: center;
     font-size: 22px;
@@ -204,13 +210,18 @@ button {
     color:rgba(6, 5, 49, 0.9);
 }
 
-.contenedor_eventos:hover{
-    animation: ZOOMIN;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-direction: alternate;
+.contenedor_eventos{
+    transition: transform 500ms ease-in-out;
 }
 
+.contenedor_eventos:hover{
+    transform: scale(1.2) rotate(5deg);
+}
+
+.contenedor_eventos:hover .polaroid{
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.9);
+    transition: box-shadow  500ms ease-in-out;
+}
 
 /* FIN SERVICIOS */
 
@@ -261,11 +272,20 @@ body .container .row {
 100% { opacity: 1; }
 }
 
-@keyframes ZOOMIN{
-    from{
-        transform:scale(1);
-    }
-    to{
-        transform:scale(1.1);
-    }
+@-webkit-keyframes sombras {
+    0%   { box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); }
+    100% { box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3); }
 }
+@-moz-keyframes sombras {
+    0%   { box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); }
+    100% { box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3); }
+}
+@-o-keyframes sombras {
+    0%   { box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); }
+    100% { box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3); }
+}
+@keyframes sombras {
+    0%   { box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); }
+    100% { box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3); }
+}
+    

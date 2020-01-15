@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<p>Hola desde single php</p>
+<p>Estamos actualizando nuestro sitio. Todo volverá a la normalidad en breve ;) </p>
 
 <?php wp_footer(); ?>
 

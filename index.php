@@ -21,7 +21,7 @@ $the_query = new WP_Query( $args );
                     <div class="carousel-item <?php if($posicion == 1) { echo 'active'; }else { echo '' ;} ?> ">
                         <div class="cont_imagen">
                             <a href="<?php the_permalink( ) ?>">  
-                                <?php the_post_thumbnail('Inicio', ['class' => 'img_inicio d-block w-100', 'alt' => 'Más Fotografía Uruguay' ]); ?>
+                                <?php the_post_thumbnail('Inicio', ['class' => 'img_inicio', 'alt' => 'Más Fotografía Uruguay' ]); ?>
                             </a>
                         </div>
                         <div class="titulo_inicio">
@@ -33,9 +33,11 @@ $the_query = new WP_Query( $args );
         </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
             </a>
 
             <?php

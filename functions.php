@@ -31,7 +31,7 @@ function masfotografia_scripts() {
     wp_enqueue_style( 'BootstrapCss',  'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
     wp_enqueue_style( 'estilos', get_template_directory_uri() . '/css/estilos.css' );
   
-    wp_enqueue_script( 'Jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', array(), '1.0.0', true  );
+    wp_enqueue_script( 'Jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', array(), '1.0.0', true  );
     wp_enqueue_script( 'Popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(), '1.0.0', true  );
     wp_enqueue_script( 'BootstrapJs', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array(), '1.0.0', true  );
     // wp_enqueue_script( 'FontAwsome', 'https://kit.fontawesome.com/61cdc69d36.js', array(), '1.0.0', true  );
