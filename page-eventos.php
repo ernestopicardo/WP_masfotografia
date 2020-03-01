@@ -34,6 +34,7 @@
         <div class="col-md-8">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner mx-auto text-center" id="imagenes">
+                    <div id="cargando"></div>
                 </div>
                 <!-- CONTROLES DEL SLIDER -->
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -60,7 +61,12 @@
     function cargaImagenes(fotos, i){
         function onProgress(e) {
             var percentComplete = (e.loaded / e.total) * 100;
-            console.log('cargado=> ', e.loaded, 'de: ', e.total);
+            console.log('Porcentaje=> ', parseInt(percentComplete) );
+            cargando = document.createElement('div');
+            cargando.className = 'cargando';
+            document.querySelector('#imagenes').append( cargando )
+
+                document.querySelector('.cargando').innerHTML = 'Cargando: ' + parseInt(percentComplete) + '%';
             }
             var req = new XMLHttpRequest();
             req.onprogress = onProgress; // or req.addEventListener("progress", onProgress, false);
@@ -80,6 +86,7 @@
                         if(i === 0){contSlider.className = 'carousel-item active';}
                         contSlider.append(imagen)
                         document.querySelector('#imagenes').append( contSlider )
+                        document.querySelector('.cargando').className = 'd-none';
 
 
                         date = new Date();

@@ -51,23 +51,38 @@ register_nav_menus( array(
 ) );
 
 
-// AGREGA UN MENU CONTENDTOR PARA LOS CUSTOM TYPES POST
+// AGREGA UN MENU CONTENEDOOR PARA LOS TIPOS DE EVENTOS
 
-function menu_frontpage(){
+function menu_tipo_servicio(){
     add_menu_page( 
-        'Tipo de Evento',
-        'Tip de Evento',
+        'Tipo de Servicio',
+        'Tipo de Servicio',
         'read',
-        'tipo-evento',
+        'tipo-servicio',
         '',
         'dashicons-camera-alt',
         5 );
 }
 
-add_action( 'admin_menu', 'menu_frontpage' );
+add_action( 'admin_menu', 'menu_tipo_servicio' );
+
+// AGREGA UN MENU CONTENEDOOR PARA LOS TIPOS DE EVENTOS
+
+function menu_nuevo_evento(){
+    add_menu_page( 
+        'Nuevo Evento',
+        'Nuevo Evento',
+        'read',
+        'nuevo-evento',
+        '',
+        'dashicons-plus-alt',
+        5 );
+}
+
+add_action( 'admin_menu', 'menu_nuevo_evento' );
 
 
-// ENTRADA CUSTOM DE INICIO
+// ENTRADA CUSTOM DE SERVICIOS
 
 add_action( 'init', 'Servicios');
 
@@ -83,13 +98,15 @@ function Servicios() {
          'excerpt',
           'comments' ),
      'capability_type' => 'page',
-      'show_in_menu' => 'tipo-evento',
+      'show_in_menu' => 'tipo-servicio',
       'rewrite' => array('slug' => 'servicios')
 );
 register_post_type( 'servicios', $args );
 
 }
 
+
+// ENTRADA CUSTOM DE CADA TIPO DE EVENTO
 add_action( 'init', 'Bodas');
 function Bodas() {
     $args = array(
@@ -101,9 +118,9 @@ function Bodas() {
         'author',
         'thumbnail', 
         'excerpt',
-         'comments' ),
+        'comments' ),
     'capability_type' => 'page',
-     'show_in_menu' => 'tipo-evento',
+     'show_in_menu' => 'nuevo-evento',
      'rewrite' => array('slug' => 'bodas')
 );
 register_post_type( 'bodas', $args );
